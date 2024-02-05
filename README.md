@@ -31,34 +31,17 @@ easy-wg-quick - Creates WireGuard configuration for hub and peers with ease
 
 These instructions will get you a copy of the project up and running on your
 local machine. This machine (called hub) will act as VPN concentrator. All
-other peers connects to hub (as in a "road warrior" configuration).
-
-### Docker
-
-A Docker container image based on Alpine Linux, [WireGuard] tools
-and [libqrencode] is available from `ghcr.io`.
-
-    curl -4 ifconfig.co/ip > extnetip.txt
-    docker run --rm -it -v "$PWD:/pwd" ghcr.io/7wells/easy-wg-quick
-
-Please note that `extnetip.txt` must be populated with the server IP via
-the cURL command above or manually if you use the generated configuration
-on the host (instead of the container).
-
-### Terraform
-
-Terraform code for deploying `easy-wg-quick` in the Google Cloud Platform
-is available from the [tf-gcp-easy-wg-quick] repository.
+other peers connect to hub (as in a "road warrior" configuration).
 
 ### Prerequisites
 
 Install [WireGuard] for your operating system on [local machine], [router],
 [VPS] or [container]. This will be your hub.
 
-As dependences `/bin/sh`, `wg`, `wg-quick`, `awk`, `grep` and `ip` commands
-should be available on hub. If `ip` is not available user is required to set
+As dependencies `/bin/sh`, `wg`, `wg-quick`, `awk`, `grep` and `ip` commands
+should be available on the hub. If `ip` is not available, user is required to set
 `EXT_NET_IF` and `EXT_NET_IP` variables in script to external network interface
-name and IP address (or edit `wghub.conf`). Optionally `qrencode` can be used
+name and IP address (or edit `wghub.conf`). Optionally, `qrencode` can be used
 to generate [QR codes] for mobile applications.
 
 #### Debian, Ubuntu
@@ -83,7 +66,7 @@ This script requires only tools installed, but to use WireGuard module
 (or user-space implementation) is also required. Detailed install guide
 for various operating systems is available at [wireguard.com/install].
 
-Peers also requires WireGuard installed. [Android] and [iOS] are supported.
+Peers also require WireGuard installed. [Android] and [iOS] are supported.
 [OpenWRT clients] are supported with [UCI] configuration fragments.
 
 ### Installing
@@ -93,26 +76,21 @@ Just download the script and make it executable with `chmod`.
     wget https://raw.githubusercontent.com/7wells/easy-wg-quick/master/easy-wg-quick
     chmod +x easy-wg-quick
 
-Note that you can use a short URL as well.
-
-    wget https://git.io/fjb5R -O easy-wg-quick
-    chmod +x easy-wg-quick
-
 Or clone repository.
 
     git clone https://github.com/7wells/easy-wg-quick.git
 
 ## Usage
 
-Script do not require any arguments. Just run it and it will create usable
-WireGuard configuration for hub and one peer. Any sequential invocation creates
-another peer configuration within same hub.
+Script does not require any arguments. Just run it and it will create a usable
+WireGuard configuration for the hub and one peer. Any sequential invocation creates
+another peer configuration within the same hub.
 
     ./easy-wg-quick # 1st run creates hub configuration and one client
     ./easy-wg-quick # any other runs creates additional clients
 
-Passing an argument to script creates configuration file with name instead of
-sequence number to help remembering which config was for which device.
+Passing an argument to the script creates a configuration file with name instead of
+a sequence number to help remembering which config was for which device.
 Following command will create `wgclient_client_name.conf` file.
 
     ./easy-wg-quick client_name
