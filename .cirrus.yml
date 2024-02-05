@@ -1,4 +1,4 @@
-# https://cirrus-ci.com/github/burghardt/easy-wg-quick
+# https://cirrus-ci.com/github/7wells/easy-wg-quick
 test_task:
   name: FreeBSD test run
   freebsd_instance:
