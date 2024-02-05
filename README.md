@@ -2,8 +2,6 @@
 easy-wg-quick - Creates WireGuard configuration for hub and peers with ease
 
  * [Getting Started](#getting-started)
-   * [Docker](#docker)
-   * [Terraform](#terraform)
    * [Prerequisites](#prerequisites)
    * [Installing](#installing)
  * [Usage](#usage)
