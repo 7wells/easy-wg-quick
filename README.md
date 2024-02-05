@@ -85,10 +85,10 @@ WireGuard configuration for the hub and one peer. Any sequential invocation crea
 another peer configuration within the same hub.
 
     ./easy-wg-quick # 1st run creates hub configuration and one client
-    ./easy-wg-quick # any other runs creates additional clients
+    ./easy-wg-quick # any further run creates an additional client
 
-Passing an argument to the script creates a configuration file with name instead of
-a sequence number to help remembering which config was for which device.
+Passing an argument to the script creates a configuration file with a name instead
+of a sequence number to help remembering which config was for which device.
 Following command will create `wgclient_client_name.conf` file.
 
     ./easy-wg-quick client_name
