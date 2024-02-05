@@ -39,7 +39,7 @@ A Docker container image based on Alpine Linux, [WireGuard] tools
 and [libqrencode] is available from `ghcr.io`.
 
     curl -4 ifconfig.co/ip > extnetip.txt
-    docker run --rm -it -v "$PWD:/pwd" ghcr.io/burghardt/easy-wg-quick
+    docker run --rm -it -v "$PWD:/pwd" ghcr.io/7wells/easy-wg-quick
 
 Please note that `extnetip.txt` must be populated with the server IP via
 the cURL command above or manually if you use the generated configuration
@@ -90,7 +90,7 @@ Peers also requires WireGuard installed. [Android] and [iOS] are supported.
 
 Just download the script and make it executable with `chmod`.
 
-    wget https://raw.githubusercontent.com/burghardt/easy-wg-quick/master/easy-wg-quick
+    wget https://raw.githubusercontent.com/7wells/easy-wg-quick/master/easy-wg-quick
     chmod +x easy-wg-quick
 
 Note that you can use a short URL as well.
@@ -100,7 +100,7 @@ Note that you can use a short URL as well.
 
 Or clone repository.
 
-    git clone https://github.com/burghardt/easy-wg-quick.git
+    git clone https://github.com/7wells/easy-wg-quick.git
 
 ## Usage
 
@@ -486,5 +486,5 @@ OpenVPN's [easy-rsa] was an inspiration for writing this script.
 [native support]: https://manpages.debian.org/buster/systemd/systemd.netdev.5.en.html#%5BWIREGUARD%5D_SECTION_OPTIONS
 [router]: https://openwrt.org/docs/guide-user/services/vpn/wireguard/start
 [split tunneling]: https://en.wikipedia.org/wiki/Split_tunneling
-[tf-gcp-easy-wg-quick]: https://github.com/burghardt/tf-gcp-easy-wg-quick
+[tf-gcp-easy-wg-quick]: https://github.com/7wells/tf-gcp-easy-wg-quick
 [wireguard.com/install]: https://www.wireguard.com/install/
