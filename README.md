@@ -1,6 +1,4 @@
 # easy-wg-quick
-[![Privacy Check](https://github.com/7wells/easy-wg-quick/actions/workflows/privacy-check.yml/badge.svg?branch=master)](https://github.com/7wells/easy-wg-quick/actions/workflows/privacy-check.yml)
-
 easy-wg-quick - Creates WireGuard configuration for hub and peers with ease
 
  * [Getting Started](#getting-started)
